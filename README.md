@@ -4,7 +4,7 @@ Notes for windows instalation
 [Vtex IO - Full documentation](https://vtex.io/docs/)
 
 # Step 1 Installing the VTEX IO Toolbelt
-## VTEX IO CLI installation and command reference
+## VTEX IO CLI installation and command reference [Doc](https://vtex.io/docs/recipes/development/vtex-io-cli-installation-and-command-reference/)
 
 To install the VTEX IO’s CLI, you need to ensure that Node.js and Yarn are installed on your machine. 
 
@@ -37,8 +37,51 @@ $ yarn global add vtex
 ```
 $ vtex login {account}
 ```
+By running the command, a browser window will open and ask for your credentials.
 # Step 3 - Creating your own workspace
+To start performing the desired changes in your storefront, we will need to create a Development workspace.
 
+Use the vtex use command in order to start configuring Store Framework in your store. For example:
+```
+$ vtex use examplename
+```
+
+>The `vtex use` command makes all your operations run in the workspace specified in the command, which means you can shift your operations to Master simply by running `vtex use master` in Toolbelt, for example.
+
+# Step 4 - Accessing your store using a workspace
+
+>Tip: you can simply run `vtex browse` in your terminal to automatically open your browser using the workspace and account in which you are working.
+
+
+Having created your own development workspace in VTEX IO, you can now go to your store by accessing https://{workspace}--{account}.myvtex.com, where {workspace} should be replaced with the name of the workspace that you've just created and {account} with the name of the VTEX account in which you are working.
+
+# Step 5 - Installing the Store Theme app
+VTEX IO Toolbelt offers the `vtex init` command which can quickly copy the Store Theme app repository to your computer, where it may be configured and fine-tuned according to your business needs.
+1. Using your terminal, navigate to an already existing local files directory where you want Store Theme to be copied to:
+```
+$ cd {example folder}
+```
+>Note that {example folder} should be replaced with the folder name where the Store Theme is going to be copied to.
+
+2. Run the `vtex init` command:
+```
+$ vtex init
+```
+3. Select the `store-theme` option and confirm that you want to download the theme folder to the destination you just chose:
+>Once you select the `store-theme` option, Toolbelt will ask you for important information about the app, such as a value for the vendor, name, title and description. With the exception of vendor, press enter to keep each field's predefined values
+4. Replace the predefined vendor value with the account name of the store that you are developing so that you'll be able to correctly publish its theme app later on.
+
+##  Understanding the Store Theme's structure
+Once you select the `store-theme` option, Toolbelt will create a copy of the Store Theme app in your local files, allowing you to work on it as you please.
+
+Open the newly created Store Theme folder in your local files using any code editor, such as Visual Studio Code. You can also use your terminal directly to achieve the same result:
+```
+$ cd store-theme
+```
+
+- `manifest.json` - App's main file. It stores important metadata, such as the app's vendor, name, version, dependencies and builders(https://vtex.io/docs/concepts/builders/).
+- `store` - Folder responsible for defining the store's templates. It's where you configure each page's components and properties.
+- `styles`: folder responsible for setting the store's visual theme. It's where you configure colors, typography and anything related to the store's style
 
 
 ## Command Reference VTEX IO
