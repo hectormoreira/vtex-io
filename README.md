@@ -67,9 +67,20 @@ $ cd {example folder}
 ```
 $ vtex init
 ```
-3. Select the `store-theme` option and confirm that you want to download the theme folder to the destination you just chose:
->Once you select the `store-theme` option, Toolbelt will ask you for important information about the app, such as a value for the vendor, name, title and description. With the exception of vendor, press enter to keep each field's predefined values
-4. Replace the predefined vendor value with the account name of the store that you are developing so that you'll be able to correctly publish its theme app later on.
+3. Select the `store-theme` option and confirm that you want to download the theme folder to the destination you just chose.
+4. In the file `manifest.json` replace the predefined `vendor` and `name` value with the account name of the store that you are developing so that you'll be able to correctly publish its theme app later on.
+
+> For the first time install graphQl into folder theme
+```
+$ cd store-theme
+$ vtex install vtex.store-graphql
+$ vtex init
+```
+Navigate to your store's website by accessing https://{workspaceName}--{account}.myvtex.com, replacing the brackets and their values with your Development workspace and VTEX account names.
+
+Now that your store is online and using a default theme code, we can build its identity by configuring the Store Theme app according to your store's needs: it's time to change templates and customize styles!
+
+
 
 ##  Understanding the Store Theme's structure
 Once you select the `store-theme` option, Toolbelt will create a copy of the Store Theme app in your local files, allowing you to work on it as you please.
