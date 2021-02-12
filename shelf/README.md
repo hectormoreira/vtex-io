@@ -14,3 +14,4 @@ vtex install vtex.flex-layout
 >All dependency installed into folder theme
 
 
+Ref: [Shelf Doc - VTEX IO](https://developers.vtex.com/vtex-developer-docs/docs/vtex-shelf)
