@@ -88,3 +88,5 @@ If desired, complete the `form` block by adding and configuring an array of chil
   }
 }
 ```
+
+Ref: [Store form - VTEX IO](https://developers.vtex.com/vtex-developer-docs/docs/vtex-store-form)
