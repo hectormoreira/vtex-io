@@ -1,5 +1,10 @@
+> From Admin go to Store setup > Search > Integration setting click in Start integration. This step will reindex the products for search.
+
 # Create shelf
 For the first time, install dependency `vtex.product-summary`
+
+
+
 ```sh
 vtex install vtex.product-summary
 vtex install vtex.product-highlights
