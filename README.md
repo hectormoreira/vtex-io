@@ -73,6 +73,7 @@ $ vtex init
 > For the first time install graphQl into folder theme
 ```
 $ cd store-theme
+$ vtex install vtex.admin-search vtex.search-resolver@1.x
 $ vtex install vtex.store-graphql
 $ vtex init
 ```
