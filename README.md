@@ -58,7 +58,7 @@ Having created your own development workspace in VTEX IO, you can now go to your
 # Step 5 - Installing the Store Theme app
 VTEX IO Toolbelt offers the `vtex init` command which can quickly copy the Store Theme app repository to your computer, where it may be configured and fine-tuned according to your business needs.
 1. Using your terminal, navigate to an already existing local files directory where you want Store Theme to be copied to:
-```
+```sh
 $ cd {example folder}
 ```
 >Note that {example folder} should be replaced with the folder name where the Store Theme is going to be copied to.
@@ -71,7 +71,7 @@ $ vtex init
 4. In the file `manifest.json` replace the predefined `vendor` and `name` value with the account name of the store that you are developing so that you'll be able to correctly publish its theme app later on.
 
 > For the first time install graphQl into folder theme
-```
+```sh
 $ cd store-theme
 $ vtex install vtex.admin-search vtex.search-resolver@1.x
 $ vtex install vtex.store-graphql
@@ -87,7 +87,7 @@ Now that your store is online and using a default theme code, we can build its i
 Once you select the `store-theme` option, Toolbelt will create a copy of the Store Theme app in your local files, allowing you to work on it as you please.
 
 Open the newly created Store Theme folder in your local files using any code editor, such as Visual Studio Code. You can also use your terminal directly to achieve the same result:
-```
+```sh
 $ cd store-theme
 ```
 
@@ -95,6 +95,20 @@ $ cd store-theme
 - `store` - Folder responsible for defining the store's templates. It's where you configure each page's components and properties.
 - `styles`: folder responsible for setting the store's visual theme. It's where you configure colors, typography and anything related to the store's style
 
+## Publish
+### Preproduction
+```sh
+#In your workspace dev, release theme version
+vtex release patch beta
+
+# Change workspace, for the first time add --production
+vtex use preproduction
+
+# Install theme in preproduction workspace
+vtex install
+
+
+```
 
 ## Command Reference VTEX IO
 Every command executed in Toolbelt must begin with vtex, irrespective of its name, as can be seen in the examples in the command table below.
