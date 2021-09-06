@@ -107,6 +107,10 @@ vtex use preproduction
 # Install theme in preproduction workspace
 vtex install
 
+# Move to master
+vtex deploy
+vtex workspace promote
+
 
 ```
 
