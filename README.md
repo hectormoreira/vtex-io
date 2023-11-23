@@ -99,7 +99,7 @@ $ cd store-theme
 ### Preproduction
 ```sh
 #In your workspace dev, release theme version
-vtex release patch beta
+vtex release patch stable
 
 # Change workspace, for the first time add --production
 vtex use preproduction
