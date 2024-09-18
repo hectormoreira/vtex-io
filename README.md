@@ -111,6 +111,12 @@ vtex install
 vtex deploy
 vtex workspace promote
 
+# For components
+vtex publish
+vtex deploy
+#in master
+vtex install
+
 
 ```
 
